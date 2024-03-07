@@ -3,15 +3,15 @@ import { atualizarCarros, cadastrarCarros, detalharCarros, excluirCarros, listar
 
 const rotas = Router()
 
-// listagem dos carros
-rotas.get('/', listarCarros)
-// detalhe dos carros
-rotas.post('/', detalharCarros)
-// cadastro de carro
-rotas.post('/', cadastrarCarros)
-// atualizacao de carro
-rotas.put('/', atualizarCarros)
-// exclusao de carro
-rotas.delete('/', excluirCarros)
+
+rotas.get('/carros', listarCarros)
+
+rotas.get('/carros/:id', detalharCarros)
+
+rotas.post('/cadastrar', cadastrarCarros)
+
+rotas.put('/atualizar/:id', atualizarCarros)
+
+rotas.delete('/excluir/:id', excluirCarros)
 
 export default rotas
